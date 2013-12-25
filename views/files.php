@@ -15,8 +15,8 @@
       <thead>
         <tr>
           <th>Current directory: <?=$path;?></th>
-          <th width="10%"> Type <th>
-          <th width="10%"> Size <th>
+          <th width="10%"> Type </th>
+          <th width="10%"> Size </th>
         </tr>
       </thead>
       <tbody>

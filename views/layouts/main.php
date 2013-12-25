@@ -11,10 +11,9 @@
 
     <!-- Bootstrap core CSS -->
     <link href="/public/css/bootstrap.css" rel="stylesheet">
+    <link href="/public/css/bootstrap-image-gallery.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
     <link href="/public/css/app.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="starter-template.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -52,6 +51,8 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
     <script src="/public/js/bootstrap.min.js"></script>
+    <script src="/public/js/bootstrap-image-gallery.min.js"></script>
   </body>
 </html>

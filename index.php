@@ -77,14 +77,26 @@ $app->get('/files(/)(:path+)', $authenticate($app), function($path = "") use ($a
   $app->view()->setData('parent', $parent);
   $app->view()->setData('dir', $dir);
 
-  $app->render('home.php', array('files', $files));
+  $app->render('files.php', array('files', $files));
 });
 
-$app->get('/pictures', $authenticate($app), function() use ($app) {
+$app->get('/photos(/)(:path+)', $authenticate($app), function($path = '') use ($app) {
   require 'conf/conf.php';
   $dir = $conf->picture_dir;
-  $files = scandir($dir, 1);
-  $app->render('home.php');
+  if(!empty($path)) {
+    $path = '/'.implode($path,'/');
+    $parent = dirname($path);
+  } else {
+    $parent = '';
+  }
+  $files = scandir($dir.$path);
+
+  $app->view()->setData('files', $files);
+  $app->view()->setData('path', $path);
+  $app->view()->setData('parent', $parent);
+  $app->view()->setData('dir', $dir);
+
+  $app->render('photos.php');
 });
 
 $app->get('/login', function() use ($app) {
