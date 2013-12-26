@@ -5,7 +5,8 @@ $conf = new stdClass();
 $conf->username = 'test';
 $conf->password = 'test';
 
-$conf->movie_dir = '/var';
-$conf->picture_dir = '/var';
+$conf->file_dir = '/var';
+$conf->picture_dir = '/var/';
+$conf->thumbnail_dir = '/var';
 
 ?>

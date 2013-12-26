@@ -7,6 +7,7 @@
       <ul class="list-group">
         <li class="list-group-item active"><a href="/files">Files</a></li>
         <li class="list-group-item"><a href="/photos">Photos</a></li>
+        <li class="list-group-item"><a href="/generate-thumbnails">Generate Thumbnails</a></li>
       </ul>
     </div>
   </div>
@@ -64,9 +65,11 @@
         <?php
         foreach($pics as $pic) {
         ?>
-          <a href="<?=$pic;?>" title="<?=$pic;?>" data-gallery>
-          <img src="<?=$pic;?>" alt="pic" width="200" height="200">
-        </a>
+          <div style="width: 200px; height: 200px;  overflow:hidden; float:left;">
+            <a href="<?=$pic;?>" title="<?=$pic;?>" data-gallery>
+              <img src="<?=$pic;?>" alt="pic" width="200px"/>
+            </a>
+          </div>
         <?php
         }
         ?>

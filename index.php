@@ -63,7 +63,7 @@ $app->get('/download(/)(:path+)', $authenticate($app), function($path = "") use 
 
 $app->get('/files(/)(:path+)', $authenticate($app), function($path = "") use ($app) {
   require 'conf/conf.php';
-  $dir = $conf->picture_dir;
+  $dir = $conf->file_dir;
   if(!empty($path)) {
     $path = '/'.implode($path,'/');
     $parent = dirname($path);
@@ -97,6 +97,10 @@ $app->get('/photos(/)(:path+)', $authenticate($app), function($path = '') use ($
   $app->view()->setData('dir', $dir);
 
   $app->render('photos.php');
+});
+
+$app->get('/generate-thumbnails', function() use ($app) {
+  $app->render('login.php');
 });
 
 $app->get('/login', function() use ($app) {
